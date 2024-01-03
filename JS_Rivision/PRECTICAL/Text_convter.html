@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text convter in js</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0 auto;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+
+        .convter input {
+            background-color: lightcoral;
+            font-size: larger;
+            height: 200px;
+            width: 600px;
+        }
+
+        .convter {
+            margin-left: 400px;
+        }
+
+        .convter button {
+            background-color: lightsalmon;
+            height: 50px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text convter</h1>
+    <div class="convter">
+        <input type="text" id="result">
+        <br>
+        <br>
+        <button onclick="UpperCase()">UpperCase</button>
+        <button onclick="lowerCase()">lowerCase</button>
+        <button onclick="clear()">clear</button>
+        <br>
+        <br>
+        <button onclick="trim()">trim</button>
+        <button onclick="wordcount()">wordcount</button>
+        <button onclick="spaceremove()">spaceremove</button>
+        <br>
+        <br>
+        <button onclick="Charctercount()">Charctercount</button>
+        <button onclick="finfandreplace()">finfandreplace</button>
+
+
+        <script>
+            function UpperCase() {
+                let a = document.getElementById("result").value;
+                document.getElementById("result").value = a.toUpperCase();
+            }
+            function lowerCase() {
+                let b = document.getElementById("result").value;
+                document.getElementById("result").value = b.toLowerCase();
+            }
+            function clear() {
+                let c = document.getElementById("result").value;
+                document.getElementById("result").value = c.toClear();
+            }
+            function trim() {
+                let d = document.getElementById("result").value;
+                document.getElementById("result").value = d.trim();
+            }
+            function wordcount() {
+                let e = document.getElementById("result").value;
+                document.getElementById("result").value = e.towordcount();
+            }
+            function spaceremove() {
+                let f = document.getElementById("result").value;
+                document.getElementById("result").value = f.toSpaceremove();
+            }
+            function Charctercount() {
+                let g = document.getElementById("result").value;
+                document.getElementById("result").value = g.length;
+            }
+            function finfandreplace() {
+                let h = document.getElementById("result").value;
+                document.getElementById("result").value = h.Finfandreplace();
+            }
+        </script>
+</body>
+
+</html>
