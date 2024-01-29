@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark & light mode in js</title>
+    <style>
+        main {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;  
+        }
+
+        .light {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+    <h1>dark & light mode</h1>
+
+    <button onclick="darkMode()">☽</button>
+    <button onclick="lightMode()">☀</button>
+    <script>
+        function darkMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkMode");
+            element.className = "dark";
+            content.innerText = "Dark Mode is ON";
+        }
+        function lightMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkMode");
+            element.className = "light";
+            content.innerText = "Dark Mode is OFF";
+        }
+    </script>
+    </div>
+</body>
+
+</html>

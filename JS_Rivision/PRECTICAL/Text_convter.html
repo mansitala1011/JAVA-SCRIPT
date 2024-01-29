@@ -11,10 +11,12 @@
             padding: 0 auto;
             box-sizing: border-box;
             font-size: 20px;
+            background-color: aliceblue;
         }
 
         .convter input {
-            background-color: lightcoral;
+            background-color: brown;
+            color: white;
             font-size: larger;
             height: 200px;
             width: 600px;
@@ -25,7 +27,8 @@
         }
 
         .convter button {
-            background-color: lightsalmon;
+            background-color: brown;
+            color: white;
             height: 50px;
             width: 200px;
         }
@@ -38,18 +41,18 @@
         <input type="text" id="result">
         <br>
         <br>
-        <button onclick="UpperCase()">UpperCase</button>
-        <button onclick="lowerCase()">lowerCase</button>
-        <button onclick="clear()">clear</button>
+        <button onclick="UpperCase()">Upper Case</button>
+        <button onclick="lowerCase()">Lower Case</button>
+        <button onclick="cleartext()">Clear Text</button>
         <br>
         <br>
-        <button onclick="trim()">trim</button>
-        <button onclick="wordcount()">wordcount</button>
-        <button onclick="spaceremove()">spaceremove</button>
+        <button onclick="trim()">Trim</button>
+        <button onclick="wordcount()">Word Count</button>
+        <button onclick="replace()">Replace</button>
         <br>
         <br>
-        <button onclick="Charctercount()">Charctercount</button>
-        <button onclick="finfandreplace()">finfandreplace</button>
+        <button onclick="Charctercount()">Charcter Count</button>
+        <button onclick="split()">Split</button>
 
 
         <script>
@@ -61,9 +64,8 @@
                 let b = document.getElementById("result").value;
                 document.getElementById("result").value = b.toLowerCase();
             }
-            function clear() {
-                let c = document.getElementById("result").value;
-                document.getElementById("result").value = c.toClear();
+            function cleartext() {
+                document.getElementById("result").value = "";
             }
             function trim() {
                 let d = document.getElementById("result").value;
@@ -71,19 +73,19 @@
             }
             function wordcount() {
                 let e = document.getElementById("result").value;
-                document.getElementById("result").value = e.towordcount();
+                document.getElementById("result").value = e.length;
             }
-            function spaceremove() {
+            function replace() {
                 let f = document.getElementById("result").value;
-                document.getElementById("result").value = f.toSpaceremove();
+                document.getElementById("result").value = f.replace("mansi","tala");    
             }
             function Charctercount() {
                 let g = document.getElementById("result").value;
                 document.getElementById("result").value = g.length;
             }
-            function finfandreplace() {
-                let h = document.getElementById("result").value;
-                document.getElementById("result").value = h.Finfandreplace();
+            function split() {
+                let h = document.getElementById("result").value;          
+                document.getElementById("result").value = h.split("");
             }
         </script>
 </body>

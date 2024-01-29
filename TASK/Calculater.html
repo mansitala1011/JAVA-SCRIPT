@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater in js</title>
+    <style>
+        * {
+            padding: 0 auto;
+            margin: 0 auto;
+            box-sizing: border-box;
+            font-size: larger;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .main {
+            border: 2px solid black;
+            width: 50%;
+            padding: 40px;
+        }
+
+        .first {
+            height: 50px;
+            width: 350px;
+        }
+
+        .second {
+            height: 50px;
+            width: 350px;
+        }
+
+        .sbtn {
+            height: 55px;
+            width: 55px;
+            margin-left: 40px;
+        }
+
+        .bbtn {
+            height: 50px;
+            width: 350px;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Basic math operation</h1>
+    <br>
+    <br>
+    <div class="main">
+        Enter 1st number: <input type="number" id="number1" class="first">
+        <br>
+        <br>
+        Enter 2nd number: <input type="number" id="number2" class="second">
+        <br>
+        <br>
+        <input type="button" id="add" value="+" class="sbtn">
+        <input type="button" id="sub" value="-" class="sbtn">
+        <input type="button" id="mul" value="*" class="sbtn">
+        <input type="button" id="div" value="/" class="sbtn">
+        <input type="button" id="mod" value="%" class="sbtn">
+        <br>
+        <br>
+        <input type="button" id="result" value="" class="bbtn">
+    </div>
+    <script type="text/javascript">
+        var n1 = document.getElementById("number1");
+        var n2 = document.getElementById("number2");
+        var res = document.getElementById("result");
+
+        document.getElementById("add").addEventListener("click", function () { res.value = parseInt(n1.value) + parseInt(n2.value); });
+        document.getElementById("sub").addEventListener("click", function () { res.value = parseInt(n1.value) - parseInt(n2.value); });
+        document.getElementById("mul").addEventListener("click", function () { res.value = parseInt(n1.value) * parseInt(n2.value); });
+        document.getElementById("div").addEventListener("click", function () { res.value = parseInt(n1.value) / parseInt(n2.value); });
+        document.getElementById("mod").addEventListener("click", function () { res.value = parseInt(n1.value) % parseInt(n2.value); });
+    </script>
+
+</body>
+
+</html>

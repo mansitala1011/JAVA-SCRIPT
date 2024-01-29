@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result in js</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0 auto;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+
+        .main {
+            border: 5px solid black;
+            padding: 20px;
+            width: 50%;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .label {
+            display: inline-block;
+            width: 40%;
+        }
+
+        
+
+        .Text {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* .result {
+            margin-left: 60%;
+            height: 30px;
+            width: 130px;
+        } */
+
+        h4 {
+            display: flex;
+        }
+
+        h3 {
+            font-weight: normal;
+            text-align: center;
+            display: flex;
+            padding: 30px 0;
+        }
+
+        #para-1, #para-2 {
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Marksheet for information technology</h1>
+        <br>
+        <h2>Enter marks</h2>
+        <br>
+        <label for="clanguage"> 1. C language:</label>
+        <input type="number" name="clanguage" id="clanguage"><br>
+        <br>
+        <label for="c++"> 2. C++:</label>
+        <input type="number" name="c++" id="c++"><br>
+        <br>
+        <label for="Database">3. Database:</label>
+        <input type="number" name="database" id="database"><br>
+        <br>
+        <label for="html"> 4. HTML:</label>
+        <input type="number" name="html" id="html"><br>
+        <br>
+        <label for="css"> 5. CSS:</label>
+        <input type="number" name="css" id="css"><br>
+        <br>
+        <label for="php">6. php:</label>
+        <input type="number" name="php" id="php"><br>
+        <br>
+        <label for="core"> 7. Core java:</label>
+        <input type="number" name="core" id="core"><br>
+        <br>
+        <button onclick="Result()">Result</button><br>
+        <br>
+        <div class="Text">
+            <h3>Total is :&nbsp;<p id="para-1"></p>&nbsp; / 350</h3>
+            <h3>Percentage is :&nbsp;<p id="para-2"></p>&nbsp; %</h3>
+        </div>
+    </div>
+    </div>
+    <script>
+        function Result() {
+            let a = parseInt(document.getElementById('clanguage').value)
+            let b = parseInt(document.getElementById('c++').value);
+            let c = parseInt(document.getElementById('database').value);
+            let d = parseInt(document.getElementById('html').value);
+            let e = parseInt(document.getElementById('css').value);
+            let f = parseInt(document.getElementById('php').value);
+            let g = parseInt(document.getElementById('core').value);
+            let total = (a) + (b) + (c) + (d) + (e) + (f) + (g);
+            console.log(total);
+            document.getElementById("para-1").innerText = total;
+
+            total = total * 100 / 350
+            console.log(total);
+            document.getElementById("para-2").innerText = total.toFixed();    
+        }
+    </script>
+</body>
+
+</html>

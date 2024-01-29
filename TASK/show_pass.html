@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show passwprd in js</title>
+    <style>
+        * {
+            background-color: pink;
+        }
+        .off {
+            height: 50px;
+            width: 300px;
+            font-size: larger;
+        }
+
+        .show {
+            position: absolute;
+            left: 17%;
+            top: 11%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show hide functionalities in JavaScript</h1>
+        <div class="pass">
+                <input id="pass-zero" class="off" oninput="okey()" type="password" placeholder="password">
+                <p class="show" id="show" onclick="handlevalidation()">Show</p>
+            </div>
+            <script>
+                function handlevalidation() {
+            var x = document.getElementById("pass-zero");
+            if (x.type === "password") {
+                x.type = "text";
+                document.getElementById("show").innerText = "Hide";
+
+            } else {
+                document.getElementById("show").innerText = "Show";
+                x.type = "password";
+            }
+        }
+            </script>
+</body>
+</html>

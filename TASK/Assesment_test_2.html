@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            background-color: blue;
+            border: 1px solid white;
+            color: white;
+            line-height: 35px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            font-size: 20px;
+            list-style: none;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .menu div a:hover {
+            background-color: navy;
+            color: white;
+        }
+
+        .menu div {
+            display: flex;
+            gap: 40px;
+        }
+
+        .logo {
+            padding-right: 50%;
+        }
+
+        .login {
+            margin-left: 90px;
+            color: blue;
+            background-color: white;
+            padding: 2px;
+        }
+
+        .down a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        /* .down a {
+            position: absolute;
+            display: none;
+            display: inline-flex;
+        } */
+
+        .down a :hover {
+            top: 100%;
+            color: blue;
+            background-color: yellowgreen;
+            position: absolute;
+            display: none;
+            display: inline-flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="logo">
+            <a>Logo</a>
+        </div>
+        <div>
+            <a>Home</a>
+            <a>About</a>
+            <a>Services</a>
+            <div class="down">
+                <a>web design</a>
+                <a>marketing</a>
+                <a>wordpress</a>
+            </div>
+            <a>Blogs</a>
+            <a>Contact us</a>
+        </div>
+        <div>
+            <a class="login">Login</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- <a>web design</a>
+<a>marketing</a>
+<a>wordpress</a>
+<a>Html</a>
+<a>CSS</a>
+<a>java script</a>
+<a>jQuery</a>
+<a>more</a> -->
